@@ -172,8 +172,21 @@
    margin-right: 30px;
    margin-bottom: 30px;
 }
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
-.features-list .item::before {
+   height: 120px;
+   margin-bottom: 30px;
+
+   border-radius: 4px;
+   background-color: var(--individual-bgc-color);
+}
+/* .features-list .item::before {
    content: " ";
    display: block;
    height: 120px;
@@ -197,7 +210,7 @@
 }
 .icon-astronaut::before {
    background-image: url("../images/features-section/astronaut.svg");
-}
+} */
 
 .features-list .item:nth-child(4n) {
    margin-right: 0;
