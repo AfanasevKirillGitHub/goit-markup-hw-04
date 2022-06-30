@@ -12,6 +12,7 @@
 /* Прочее */
    --individual-black-logo: #000000;
    --individual-bgc-color: #F5F4FA;
+   --icon-color: #AFB1B8;
 }
 /* Постоянные переменные на странице */
  body {
@@ -64,7 +65,8 @@
 }
 
 /* Site-nav */
- .link {
+ .link,
+ .contact-link {
    color: var(--title-text-color);
    font-weight: 500;
    font-size: 14px;
@@ -88,8 +90,8 @@
 .nav-list .link.current,
 .nav-list .link:hover,
 .nav-list .link:focus,
-.contact-list .link:hover,
-.contact-list .link:focus,
+.contact-list .contact-link:hover,
+.contact-list .contact-link:focus,
 .contact-list-footer .link:hover,
 .contact-list-footer .link:focus {
    color: var(--accent-color);  
@@ -104,8 +106,19 @@
    display: flex;
    margin-left: auto;
 }
-.contact-list .link {
+.contact-list .contact-link {
    color: var(--primary-text-color);
+   display: flex;
+   align-items: center;
+}
+.contact-icon {
+   margin-right: 10px;
+   padding: 0;
+   fill: var(--primary-text-color);
+   
+}
+.contact-link:hover .contact-icon {
+   fill: currentColor;
 }
 
 /* Hero */
@@ -310,10 +323,33 @@
    text-align: center;
    }
 .team-text {
-   margin-bottom: 30px;
+   margin-bottom: 16px;
       font-size: 16px;
       line-height: 1.19;
       text-align: center;
+}
+
+.team-social-list {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-bottom: 30px;
+}
+.social-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+   color: var(--icon-color);
+   border-radius: 50%;
+}
+.social-link:hover{
+   background-color: var(--accent-color);
+   color: var(--basic-white);
+}
+.social-icon {
+   fill: currentColor;
 }
 
 /* Footer */
@@ -348,6 +384,33 @@
    line-height: 1.2;
    color: var(--basic-white);
    text-decoration: none;
+}
+
+/* Клиенты */
+
+.clients-list {
+display: flex;  
+gap: 30px;
+}
+
+.client-link {
+display: flex;
+width: 170px;
+height: 92px;
+align-items: center;
+justify-content: center;
+border: 1px solid var(--icon-color);
+border-radius: 4px;
+}
+
+.client-icon {
+fill: var(--icon-color);
+}
+
+.client-link:hover,
+.client-link:hover .client-icon{
+   fill: var(--accent-color);
+   border-color: var(--accent-color);
 }
 
 
